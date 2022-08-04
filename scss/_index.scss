@@ -1,0 +1,1048 @@
+/* Index */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $black !important;
+}
+h1{
+    color: $white;
+    font-family: $fontTwo;
+    font-size: $textXxl;
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    text-align: center;
+    color: $black;
+    font-family: $fontTree; 
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+.titulo-dest{
+    font-family: $fontFour;
+    font-size: $textLg;
+    text-align: center;
+    color: $white;
+}
+.titulo-productos{
+    text-align: center;
+    color: $white;
+    font-family: $fontFour;
+    font-size: $textLg;
+}
+
+.descuento{
+    font-size: $textLg;
+    height: 100px;
+    text-align: center;
+}
+
+.titulo__pie--xl{
+    text-align: left;
+    text-justify: auto;
+    font-size: $textXxl;
+    margin: 30px auto;
+}
+
+.text-white{
+    color: $white;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.novedades-articulo{
+    height: auto;
+    padding: 10px 50px;
+    margin: 30px auto;
+    justify-content: flex-start;
+}
+
+.encabezado__img--fluid{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: $w-100;
+    height: 700px;
+    margin: 30px auto;
+}
+
+.galeria{
+	margin: 60px;
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+div figcaption{
+    font-size: 20px;
+    justify-content: center;
+}
+.caja{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "principal principal"
+    "contenido contenido"
+    "aside aside"
+    "contacto contacto";
+    justify-content: center;
+    padding: 10px;
+}
+
+.principal{
+    grid-area: principal;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+aside{
+    grid-area: aside;
+}
+
+.pie-pagina{
+    grid-area: contacto;
+}
+
+/**Header*/
+@media (max-width:670px){
+    .caja{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "principal"
+        "contenido"
+        "formulario"
+        "aside"
+        "contacto";
+    }
+    .principal{
+        grid-area: principal;
+    }
+    .contenido{
+        grid-area: contenido;
+    }
+    aside{
+        grid-area: aside;
+    }
+    .pie-pagina{
+        grid-area: contacto;
+    }
+    .navbar-brand .logo-nav{
+        width: 40%;
+    }
+    .botonera img{
+        width: $w-50;
+        margin: 15px;
+    }
+    .navbar .dropdown-menu{
+        background-color: $black;
+    }
+    .navbar-nav{
+        margin-right: 20px;
+    }
+    .nav-color{
+        background-color:$black;
+    }
+    .bot-color{
+        color: $secondaryColor !important;
+    }
+    .navbar-toggler-icon{
+       background-color: $secondaryColor;
+    }
+    .botonera ul li a{
+        color: $secondaryColor;
+        text-decoration: none;
+        font-family: $fontTwo;
+        line-height: 1.6rem;
+        font-weight: 200;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        &:hover{
+            color: white;
+            font-weight: 600;
+            background-size: 100% 2px;
+        }
+    }
+    
+    /* fin header*/
+    /**menu*/
+    h1{
+        @include texto-nosotros(2rem, white, 300);
+    }
+    .titulo-dest{
+        font-family: $textMd;
+        font-size: $textMd;
+        margin: 10px;
+    }
+    .cards-slider{
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+        padding: 5px;
+        .card{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            .img-slider{
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                img{
+                    max-width: $w-100;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .card-body{
+        text-align: center;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .banners{
+        display: block;
+        justify-content: center;
+        .banners-pages{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 15px;
+            margin: 10px 0;
+            height: 100%;
+            li{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                list-style: none;
+                padding-left: 0%;
+                img{
+                    width: 60%;
+                    height: 90%;
+                    filter: grayscale(1);
+                    .ban-img{
+                        width: 320px;
+                        height: 80%;
+                    }
+                }
+                a{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: $w-100;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    .titulo-banner{
+                        display: block;
+                        position: absolute;
+                        color: map-get($map: $paleta, $key: colorCuatro);
+                        background-color: rgba(128, 128, 128, 0.559);
+                        padding: 12px 12px;
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        z-index: 2;
+                        transition: all .2s ease;
+                        font-family: $fontTree;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    /**Fin menu*/
+    /*Aside*/
+    .newsletter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .img-ajax{
+            background-image: url(../img/index/ajax-news.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 315px;
+            width: 80%;
+            margin: 14px;
+            .texto{
+                font-size: $textMd;
+                display: inline-block;
+                margin-left: 50px;
+                margin-top: 20px;
+                padding: auto;
+                p{
+                    font-size: 1.3rem;
+                    font-family: $fontOne;
+                }
+                .btn-primary{
+                    margin-top: 10px;
+                }
+                .form-check{
+                    margin: 0;
+                }
+                h4{
+                    font-family: $fontTree;
+                    font-style: italic;
+                    color: $white;
+                }
+            }
+        }
+    }
+span .text.yellow{
+    color: $secondaryColor;
+    font-size: 1.8rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.descuento{
+    background-color: $secondaryColor;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .titulo-descuento{
+        font-size: 1.5rem;
+        font-family: $fontTree;
+        color: $black;
+    }
+}
+/*Fin Aside*/
+/*Footer*/
+.pie-pagina{
+    width: $w-100;
+    .img-cancha{
+        background-image: url(..//img/index/estadio.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        .titulo-pie{
+            color: $white;
+            font-size: $textMd;
+            margin: 10px;
+            padding: 20px;
+            font-family: $fontTree;
+        }
+    }
+    .grupo-1{
+        width: $w-100;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        .box{
+            color: $black;
+            margin-bottom: 25px;
+            font-size: 15px;
+            h2{
+                font-family: $fontTree;
+                font-style: italic;
+            }
+            p{
+                font-family: $fontFour;
+                font-size: 15px;
+            }
+            .red-social a{
+                display: inline;
+                text-decoration: none;
+                font-size: 1.3em;
+                color: $black;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+footer .grupo-1{
+    background-color: $secondaryColor;
+    background-size: cover;
+    display: grid;
+}
+.img-header{
+    width: auto;
+    height: 400px;
+}
+.novedades-articulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    border:solid $secondaryColor 5px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.contacto article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.contacto section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+footer{
+    background-image: url(../img/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 74%;
+    height: 300px;
+    margin-right: 20px;
+}
+}
+/*Footer*/
+
+
+
+@media (max-width:1023px)
+{
+    .caja{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "principal"
+        "contenido"
+        "formulario"
+        "aside"
+        "contacto";
+    }
+    /* Header  */ 
+   
+    .botonera img{
+        width: 350px;
+        margin: 15px;
+    }
+    .botonera ul li a{
+        color: $secondaryColor;
+        text-decoration: none;
+        font-family: $fontTwo;
+        line-height: 1.6rem;
+        font-weight: 200;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        &:hover{
+            color: $white;
+            font-weight: 600;
+            background-size: 100% 2px;
+        }
+    }
+    .navbar .dropdown-menu{
+        background-color: $black;
+    }
+    .navbar-nav{
+        margin-right: 20px;
+    }
+    .nav-color{
+        background-color:$black;
+    }
+    .bot-color{
+        color: $secondaryColor !important;
+    }
+    .navbar-toggler-icon{
+        background-color: $secondaryColor;
+    }
+    
+     /* Fin Header  */   
+    /* Main*/    
+    .titulo-dest{
+        font-family: $fontFour;
+        font-size: 2.5rem;
+        margin: 20px;
+    }
+    .cards-slider{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        .card{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            .img-slider{
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                img{
+                    max-width: $w-100;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .card-body{
+        text-align: center;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .banners{
+        display: block;
+        justify-content: center;
+        .banners-pages{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 15px;
+            margin: 10px 0;
+            height: 100%;
+            li{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                list-style: none;
+                padding-left: 0%;
+                .ban-img{
+                    width: 360px;
+                    height: 80%;
+                }
+                img{
+                    width: 100px;
+                    height: 100%;
+                    filter: grayscale(1);
+                }
+                a{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: $w-100;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    .titulo-banner{
+                        display: block;
+                        position: absolute;
+                        color: map-get($map: $paleta, $key: colorCuatro);
+                        background-color: rgba(128, 128, 128, 0.559);
+                        padding: 12px 12px;
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        z-index: 2;
+                        transition: all .2s ease;
+                        font-family: $fontTree;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    /*fin main*/
+    /*Aside*/
+    .newsletter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .img-ajax{
+            background-image: url(../img/index/ajax-news.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 315px;
+            width: 80%;
+            margin: 0 auto;
+            .texto{
+                font-size: 2rem;
+                display: inline-block;
+                margin-left: 50px;
+                margin-top: 20px;
+                padding: auto;
+                .texto h4{
+                    font-family: $fontTree;
+                    font-style: italic;
+                    color: $white;
+                }
+                p{
+                    font-size: 1.3rem;
+                    font-family: $fontOne;
+                }
+                .text-yellow{
+                    color: $secondaryColor;
+                    font-size: 2.2rem;
+                    font-family: $fontTree;
+                    font-style: italic;
+                }
+                form{
+                    font-size: $textSm;
+                    .form-control{
+                        width: 90%;
+                    }
+                    .contenedor-boton{
+                        width: $w-100;
+                        gap: 40px;
+                        .boton{
+                            display: inline-flex;
+                            width: 40%;
+                            height: 35px;
+                            background-color: $secondaryColor;
+                            color: $black;
+                            font-size: 20px;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: .3s ease all;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                        }
+                        .btn-form:hover{
+                            background: $black;
+                            color: $secondaryColor;
+                            border-color: $secondaryColor;
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+    .video{
+        display: flex;
+        justify-content: center;
+        iframe{
+            width: 80%;
+            margin-top: 30px;
+        }
+    }
+    .mail{
+        display: flex;
+        margin-top: 20px;
+    }
+    .descuento{
+        background-color: $secondaryColor;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        .titulo-descuento{
+            font-size: 1.8rem;
+            font-family: $fontTree;
+            color: $black;
+        }
+    }
+    /*Fin aside*/
+    /*Footer*/
+    .pie-pagina{
+        width: $w-100;
+        display: block;
+        .img-cancha{
+            background-image: url(../img/index/estadio.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 250px;
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            .titulo-pie{
+                color: $white;
+                font-size: $textMd;
+                margin: 10px;
+                padding: 20px;
+                font-family:  $fontTree;
+            }
+        }
+        .grupo-1{
+            width: $w-100;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            background-color: $secondaryColor;
+            background-size: cover;
+            .box{
+                color: $black;
+                margin-bottom: 25px;
+                font-size: 18px;
+                h2{
+                    font-family: $fontTree;
+                    font-style: italic;
+                }
+                p{
+                    font-family: $fontFour;
+                    font-size: 18px;
+                }
+                .red-social a{
+                    display: inline;
+                    text-decoration: none;
+                    font-size: 1.5em;
+                    color: $black;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    /*Fin footer*/
+}
+
+
+@media (min-width: 1024px)
+{
+    .caja{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "principal principal"
+        "contenido contenido"
+        "aside aside"
+        "contacto contacto";
+        justify-content: center;
+        padding: 10px;
+    }
+    /* Header */
+    .botonera ul li a{
+        color: $secondaryColor;
+        text-decoration: none;
+        font-family: $fontTwo;
+        font-size: 16px;
+        line-height: 1.6rem;
+        font-weight: 200;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        &:hover{
+            color: $white;
+            font-weight: 600;
+            background-size: 100% 2px;
+        }
+    }
+    .botonera img{
+        width: 350px;
+        margin: 15px;
+    }
+    .navbar-brand .logo-nav{
+        width: 50%;
+    }
+    .navbar .dropdown-menu{
+        background-color: $black;
+    }
+
+    .navbar-nav{
+        margin-right: 20px;
+    }
+    .nav-color{
+        background-color: $black;
+    }
+ 
+    .bot-color{
+        color: $secondaryColor !important;
+    }
+
+    .navbar-toggler-icon{
+        background-color: $secondaryColor;
+    }
+   
+    /* Fin header  */
+    /* Menu */
+    .titulo-dest{
+        margin-top: 40px;
+        padding: 10px;
+        font-family: $fontTwo;
+        font-size: 2.5rem;
+    }
+    .cards-slider{
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+        .card{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            .img-slider{
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px;
+                img{
+                    max-width: $w-100;
+                    max-height: 100%;
+                }
+            }
+            .card-body{
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    .banners{
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        .banners-pages{
+            height: auto;
+            width: 100%;
+            li{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                list-style: none;
+                padding-left: 0%;
+                .ban-img{
+                    width: 80%;
+                    
+                    filter: grayscale(1);
+                }
+                a{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: $w-100;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    .titulo-banner{
+                        display: block;
+                        position: absolute;
+                        color: map-get($map: $paleta, $key: colorCuatro);
+                        background-color: rgba(128, 128, 128, 0.559);
+                        padding: 12px 12px;
+                        font-size: 17px;
+                        letter-spacing: 4px;
+                        text-transform: uppercase;
+                        z-index: 2;
+                        transition: all .2s ease;
+                        font-family: $fontTree;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+    /*Aside*/
+    aside{
+        margin: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+        "news video"
+        "cupon cupon";
+    }
+
+    .newsletter{
+        grid-area: news;
+    }
+    .video{
+        grid-area: video;
+    }
+    .desc-aside{
+        grid-area: cupon;
+    }
+    .newsletter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .img-ajax{
+            background-image: url(../img/index/ajax-news.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 315px;
+            width: 96%;
+            margin: 0 auto;
+            .texto{
+                font-size: $textMd;
+                display: inline-block;
+                margin-left: 50px;
+                margin-top: 20px;
+                padding: auto;
+                h4{
+                    font-family: $fontTree;
+                    font-style: italic;
+                    color: $white;
+                }
+                .text-yellow{
+                    color: $secondaryColor;
+                    font-size: 2.2rem;
+                }
+                form{
+                    font-size: $textSm;
+                    .form-control{
+                        width: $w-100;
+                    }
+                    .contenedor-boton{
+                        width: $w-100;
+                        gap: 40px;
+                        .boton{
+                            display: inline-flex;
+                            width: 40%;
+                            height: 35px;
+                            background-color: $secondaryColor;
+                            color: $black;
+                            font-size: 20px;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: .3s ease all;
+                            border-radius: 5px;
+                            margin-top: 5px;
+                        }
+                        .btn-form:hover{
+                            background: $black;
+                            color: $secondaryColor;
+                            border-color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .video{
+        display: flex;
+        justify-content: flex-end;
+        iframe{
+            width: 96%;
+            margin: 30px;
+        }
+    }
+    .descuento{
+        background-color: $secondaryColor;
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .titulo-descuento{
+            font-size: $textLg;
+            font-family: $fontTree;
+            color: $black;
+        }
+    }
+    /*Fin aside*/
+    /*Footer*/
+    footer .grupo-1{
+        width: $w-100;
+        height: 150px;
+        background-color: $secondaryColor;
+        display: grid;
+    }
+    .img-cancha{
+        background-image: url(..//img/index/estadio.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+        height: 550px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        .titulo-pie{
+            color: $white;
+            font-size: $textXxl;
+            margin: 30px;
+            padding: 20px;
+            font-family: $fontTree;
+        }
+    }
+    .pie-pagina .grupo-1{
+        width: $w-100;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 50px;
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .box{
+            color: $black;
+            margin-bottom: 25px;
+            font-size: 20px;
+            h2{
+                font-family: $fontTree;
+                font-style: italic;
+            }
+            p{
+                font-family: $fontFour;
+                font-size: 1.4rem;
+            }
+            .red-social a{
+                display: inline;
+                text-decoration: none;
+                font-size: 2em;
+                color: $black;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* CSS Index */
+
+
+
+
+
+
+
+
+
+    
+
+   
+
+    
+    
+   
+    
+   
+  
+    
+   
+
+    
+    
+   
+   
+    
+
+   
+   
+   
+
+    

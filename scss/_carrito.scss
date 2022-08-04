@@ -1,0 +1,439 @@
+/*CSS CARRITO*/
+@media (max-width:670px){
+    /*Header*/
+    .botonera{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo-nav{
+            width: 80%;
+        }
+        ul li{
+            margin-right: 16px;
+            a{
+                font-size: 12px;
+                img{
+                    display: flex;
+                    width: 300px;
+                }
+            }
+        }
+    }
+    /*Fin Header*/
+    /*Main*/
+    .fondo-img{
+        background-image: url(../img/pag-retros/fondo-compra2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        .contenedor-compra{
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "formCompra"
+            "infoCompra";
+            .formCompra{
+                grid-area: formCompra;
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                margin: 24px;
+            }
+            .text-white{
+                color: white;
+                }
+            .infoCompra{
+                grid-area: infoCompra;
+                margin: 20px;
+                margin-left: 10px;
+                .titulo-codigo{
+                    color: yellow;
+                }
+                .galeria figure{
+                    width: 85%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .card{
+                        display: flex;
+                        align-items: center;
+                        margin: 20px;
+                        width: 50%;
+                        img{
+                            width: 80%;
+                            height: 40%;
+                            margin: 10px;
+                        }
+                        .text-black{
+                            color: black;
+                        }
+                        .card-body{
+                            text-align: center;
+                            margin: 0;
+                            padding: 0;
+                            p{
+                                font-size: 20px;
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+/*Fin Main*/
+/*Aside*/
+.descuento{
+    width: auto;
+}
+/*Fin Aside*/
+/*Footer*/
+.pie-pagina{
+    width: $w-100;
+    .img-cancha{
+        background-image: url(..//img/index/estadio.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 220px !important;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        .titulo-pie{
+            color: $white;
+            font-size: $textMd;
+            margin: 10px;
+            padding: 20px;
+            font-family: $fontTree;
+        }
+    }
+    .grupo-1{
+        width: $w-100;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        .box{
+            color: $black;
+            margin-bottom: 25px;
+            font-size: 15px;
+            p{
+                font-family: $fontFour;
+                font-size: 14px;
+            }
+            .red-social a{
+                display: inline;
+                text-decoration: none;
+                font-size: 1.3em;
+                color: $black;
+                margin-right: 10px;
+            }
+            h3{
+                font-family: $fontTree;
+                color: $black;
+                font-style: $fontStyle;
+            }
+        }
+    }
+}
+/*Fin Footer*/
+}
+
+@media (max-width:1023px){
+    .contenedor-compra{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "formCompra"
+        "infoCompra";
+    }
+    /*Header*/
+    .botonera ul li{
+        margin: 4px;
+        display: flex;
+        justify-content: space-around;
+        a{
+            font-size: 13px;
+        }
+    }
+    .navbar-brand .logo-nav{
+        width: 80%;
+    }
+    /*Fin Header*/
+    /*Main*/
+    .fondo-img{
+        background-image: url(../img/pag-retros/fondo-compra2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    .formCompra{
+        grid-area: formCompra;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 24px;
+    }
+    .infoCompra{
+        grid-area: infoCompra;
+        margin: 20px;
+        .galeria figure{
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .card{
+                display: flex;
+                align-items: center;
+                margin: 20px;
+                width: 50%;
+                img{
+                    width: 80%;
+                    height: 40%;
+                    margin: 10px;
+                }
+                .card-body{
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    p{
+                        font-size: 20px;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        .titulo-codigo{
+            color: yellow;
+        }
+    }
+    .text-white{
+    color: white;
+    }
+    .text-yellow{
+        color: yellow;
+        margin-top: 40px;
+    }
+    .text-black{
+        color: black;
+    }
+/*Fin Main*/
+/*Aside*/
+.descuento{
+    width: auto;
+}
+/*Fin Aside*/
+/*Footer*/
+.pie-pagina{
+    display: block;
+        .img-cancha{
+            background-image: url(..//img/index/estadio.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 250px;
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            .titulo-pie{
+                color: $white;
+                font-size: $textMd;
+                margin: 10px;
+                padding: 20px;
+                font-family: $fontTree;
+            }
+            .grupo-1{
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                align-content: center;
+                .box{
+                    color: $black;
+                    margin-bottom: 25px;
+                    font-size: 18px;
+                    p{
+                        font-family: $fontFour;
+                        font-size: 18px;
+                    }
+                    .red-social a{
+                        display: inline;
+                        text-decoration: none;
+                        font-size: 1.5em;
+                        color: $black;
+                        margin-right: 10px;
+                    }
+                    h3{
+                        font-family: $fontTree;
+                        color: $black;
+                        font-style: $fontStyle;
+                    }
+                }
+            }
+        }
+    }
+ /*Fin Footer*/
+}
+
+@media (min-width: 1024px){
+    /*Header*/
+    header a img{
+        width: 45%;
+        height: auto;
+        margin: 20px;
+    }
+    .botonera ul li{
+        margin: 10px;
+        a{
+            font-size: 20px;
+        }
+    }
+    /*Fin Header*/
+    /*Main*/
+    .contenedor-compra{
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "formCompra infoCompra";
+        display: flex;
+        padding: 10px;
+    }
+    .fondo-img{
+        background-image: url(../img/pag-retros/fondo-compra2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 76vh;
+    }
+    .formCompra{
+        grid-area: formCompra;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+    .infoCompra{
+        grid-area: infoCompra;
+        .galeria figure{
+            width: 85%;
+            margin: 0 auto;
+            .card{
+                display: flex;
+                align-items: center;
+                margin: 20px;
+                width: 50%;
+                .text-black{
+                    color: black;
+                }
+                img{
+                    width: 80%;
+                    height: 40%;
+                    margin: 10px;
+                }
+                .card-body{
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    p{
+                        font-size: 20px;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        .titulo-codigo{
+            color: yellow;
+        }
+    }
+    .text-white{
+    color: white;
+    }
+    .text-yellow{
+        color: yellow;
+        margin-top: 40px;
+    }
+    .main-compra .form1{
+        margin-top: 30px;
+        margin-left: 10px;
+        width: 50%;
+    }
+    .main-compra .form2{
+        margin-top: 30px;
+        width: 50%;
+    }
+/*Aside*/
+ .descuento{
+    width: auto;
+}
+/*Fin Aside*/
+/*  Footer */
+footer {
+    width: $w-100;
+    height: 150px;
+    background-color: $secondaryColor;
+    display: grid;
+}
+.pie-pagina{
+    display: block;
+    .img-cancha{
+        background-image: url(..//img/index/estadio.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: $w-100;
+        height: 550px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        .titulo-pie{
+            color: $white;
+            font-size: $textXxl;
+            margin: 30px;
+            padding: 20px;
+            font-family: $fontTree;
+        }
+    }
+    .grupo-1{
+        width: $w-100;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 50px;
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .box{
+            color: $black;
+            margin-bottom: 25px;
+            font-size: 20px;
+            p{
+                font-family: $fontFour;
+                font-size: 1.4rem;
+            }
+            .red-social a{
+                display: inline;
+                text-decoration: none;
+                font-size: 2em;
+                color: $black;
+                margin-right: 10px;
+            }
+        }
+    }   
+}
+/* Fin Footer */   
+}
+
+
+
+
+
+
+

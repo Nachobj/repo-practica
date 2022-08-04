@@ -1,0 +1,120 @@
+@keyframes headerAnimate{
+    0%{background-image: url(../img/header/header-arg1.jpg);}
+    25%{background-image: url(../img/header/header-int.jpg);}
+    50%{background-image: url(../img/header/header-city.jpg);}
+    75%{background-image: url(../img/header/header-real1.jpg);}
+    100%{background-image: url(../img/header/header-13.jpg);}
+}
+header .slider{
+    height: 55vh;
+    width:  100%;
+    background-size: cover;
+    animation-name: headerAnimate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    @media (max-width: 670px){
+        height: 25vh;
+        width:  100%;
+    }
+    @media (min-width: 671px){
+        height: 36vh;
+        width:  100%;
+    }
+    @media (min-width: 1024px){
+        height: 55vh;
+        width:  100%;
+    }
+}
+
+h3{
+    color: black;
+}
+
+.ban-mar{
+    width: 100%;
+}
+.ban-log-mar{
+    width: 90%;
+}
+
+/*Extends*/
+
+.btnGeneral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease all;
+    &:hover{
+        background: black;
+        color: yellow;
+        border-color: yellow;
+    }
+}
+
+.btnNewslwtter{
+    @extend .btnGeneral;
+    width: 40%;
+    height: 35px;
+    background-color: $secondaryColor;
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.btnCompra{
+    @extend .btnGeneral;
+    width: 40%;
+    height: 38px;
+    background-color: yellow;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.btnCodigo{
+    @extend .btnGeneral;
+    width: 20%;
+    height: 35px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/*Mixins*/
+@mixin texto-nosotros($textLg, $black, $textLight){
+    font-size: $textLg;
+    color: $black;
+    font-weight: $textLight;
+    font-family: $fontTree;
+    padding: 10px 15px;
+    margin: 20px;
+    background-color: $secondaryColor;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+}
+
+.encabezados{
+    @include texto-nosotros($textLg, $black, $textLight);
+    @media (max-width: 670px){
+        font-size: $textMd;
+    }
+}
+
+
+/*maps*/
+$paleta: (
+   uno: $black,
+   colorDos: $secondaryColor,
+   colorTres: $white,
+   colorCuatro: $bannerColor,
+)

@@ -1,0 +1,2837 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@keyframes headerAnimate {
+  0% {
+    background-image: url(../img/header/header-arg1.jpg);
+  }
+  25% {
+    background-image: url(../img/header/header-int.jpg);
+  }
+  50% {
+    background-image: url(../img/header/header-city.jpg);
+  }
+  75% {
+    background-image: url(../img/header/header-real1.jpg);
+  }
+  100% {
+    background-image: url(../img/header/header-13.jpg);
+  }
+}
+header .slider {
+  height: 55vh;
+  width: 100%;
+  background-size: cover;
+  animation-name: headerAnimate;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 670px) {
+  header .slider {
+    height: 25vh;
+    width: 100%;
+  }
+}
+@media (min-width: 671px) {
+  header .slider {
+    height: 36vh;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  header .slider {
+    height: 55vh;
+    width: 100%;
+  }
+}
+
+h3 {
+  color: black;
+}
+
+.ban-mar {
+  width: 100%;
+}
+
+.ban-log-mar {
+  width: 90%;
+}
+
+/*Extends*/
+.btnGeneral, .btnCodigo, .btnCompra, .btnNewslwtter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease all;
+}
+.btnGeneral:hover, .btnCodigo:hover, .btnCompra:hover, .btnNewslwtter:hover {
+  background: black;
+  color: yellow;
+  border-color: yellow;
+}
+
+.btnNewslwtter {
+  width: 40%;
+  height: 35px;
+  background-color: yellow;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.btnCompra {
+  width: 40%;
+  height: 38px;
+  background-color: yellow;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.btnCodigo {
+  width: 20%;
+  height: 35px;
+  background-color: yellow;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/*Mixins*/
+.encabezados {
+  font-size: 3rem;
+  color: black;
+  font-weight: 300;
+  font-family: "Anton", sans-serif;
+  padding: 10px 15px;
+  margin: 20px;
+  background-color: yellow;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+@media (max-width: 670px) {
+  .encabezados {
+    font-size: 2rem;
+  }
+}
+
+/*maps*/
+/* Index */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black !important;
+}
+
+h1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  font-family: "Anton", sans-serif;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.titulo-dest {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
+
+.titulo-productos {
+  text-align: center;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3rem;
+}
+
+.descuento {
+  font-size: 3rem;
+  height: 100px;
+  text-align: center;
+}
+
+.titulo__pie--xl {
+  text-align: left;
+  text-justify: auto;
+  font-size: 4rem;
+  margin: 30px auto;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.novedades-articulo {
+  height: auto;
+  padding: 10px 50px;
+  margin: 30px auto;
+  justify-content: flex-start;
+}
+
+.encabezado__img--fluid {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  margin: 30px auto;
+}
+
+.galeria {
+  margin: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div figcaption {
+  font-size: 20px;
+  justify-content: center;
+}
+
+.caja {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  grid-template-areas: "principal principal" "contenido contenido" "aside aside" "contacto contacto";
+  justify-content: center;
+  padding: 10px;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.contenido {
+  grid-area: contenido;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.pie-pagina {
+  grid-area: contacto;
+}
+
+/**Header*/
+@media (max-width: 670px) {
+  .caja {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "principal" "contenido" "formulario" "aside" "contacto";
+  }
+  .principal {
+    grid-area: principal;
+  }
+  .contenido {
+    grid-area: contenido;
+  }
+  aside {
+    grid-area: aside;
+  }
+  .pie-pagina {
+    grid-area: contacto;
+  }
+  .navbar-brand .logo-nav {
+    width: 40%;
+  }
+  .botonera img {
+    width: 50%;
+    margin: 15px;
+  }
+  .navbar .dropdown-menu {
+    background-color: black;
+  }
+  .navbar-nav {
+    margin-right: 20px;
+  }
+  .nav-color {
+    background-color: black;
+  }
+  .bot-color {
+    color: yellow !important;
+  }
+  .navbar-toggler-icon {
+    background-color: yellow;
+  }
+  .botonera ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6rem;
+    font-weight: 200;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+  }
+  .botonera ul li a:hover {
+    color: white;
+    font-weight: 600;
+    background-size: 100% 2px;
+  }
+  /* fin header*/
+  /**menu*/
+  h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    font-family: "Anton", sans-serif;
+    padding: 10px 15px;
+    margin: 20px;
+    background-color: yellow;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .titulo-dest {
+    font-family: 2rem;
+    font-size: 2rem;
+    margin: 10px;
+  }
+  .cards-slider {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 5px;
+  }
+  .cards-slider .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .cards-slider .card .img-slider {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .cards-slider .card .img-slider img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card-body {
+    text-align: center;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  .banners {
+    display: block;
+    justify-content: center;
+  }
+  .banners .banners-pages {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    margin: 10px 0;
+    height: 100%;
+  }
+  .banners .banners-pages li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 0%;
+  }
+  .banners .banners-pages li img {
+    width: 60%;
+    height: 90%;
+    filter: grayscale(1);
+  }
+  .banners .banners-pages li img .ban-img {
+    width: 320px;
+    height: 80%;
+  }
+  .banners .banners-pages li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  .banners .banners-pages li a .titulo-banner {
+    display: block;
+    position: absolute;
+    color: rgb(232, 251, 54);
+    background-color: rgba(128, 128, 128, 0.559);
+    padding: 12px 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: all 0.2s ease;
+    font-family: "Anton", sans-serif;
+    font-size: 1.5rem;
+  }
+  /**Fin menu*/
+  /*Aside*/
+  .newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .newsletter .img-ajax {
+    background-image: url(../img/index/ajax-news.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 315px;
+    width: 80%;
+    margin: 14px;
+  }
+  .newsletter .img-ajax .texto {
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: auto;
+  }
+  .newsletter .img-ajax .texto p {
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+  }
+  .newsletter .img-ajax .texto .btn-primary {
+    margin-top: 10px;
+  }
+  .newsletter .img-ajax .texto .form-check {
+    margin: 0;
+  }
+  .newsletter .img-ajax .texto h4 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+    color: white;
+  }
+  span .text.yellow {
+    color: yellow;
+    font-size: 1.8rem;
+  }
+  .video {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  .descuento {
+    background-color: yellow;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .descuento .titulo-descuento {
+    font-size: 1.5rem;
+    font-family: "Anton", sans-serif;
+    color: black;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box h2 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    margin-right: 10px;
+  }
+  footer .grupo-1 {
+    background-color: yellow;
+    background-size: cover;
+    display: grid;
+  }
+  .img-header {
+    width: auto;
+    height: 400px;
+  }
+  .novedades-articulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario {
+    border: solid yellow 5px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .contacto article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  .contacto section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  footer {
+    background-image: url(../img/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 74%;
+    height: 300px;
+    margin-right: 20px;
+  }
+}
+/*Footer*/
+@media (max-width: 1023px) {
+  .caja {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "principal" "contenido" "formulario" "aside" "contacto";
+  }
+  /* Header  */
+  .botonera img {
+    width: 350px;
+    margin: 15px;
+  }
+  .botonera ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6rem;
+    font-weight: 200;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+  }
+  .botonera ul li a:hover {
+    color: white;
+    font-weight: 600;
+    background-size: 100% 2px;
+  }
+  .navbar .dropdown-menu {
+    background-color: black;
+  }
+  .navbar-nav {
+    margin-right: 20px;
+  }
+  .nav-color {
+    background-color: black;
+  }
+  .bot-color {
+    color: yellow !important;
+  }
+  .navbar-toggler-icon {
+    background-color: yellow;
+  }
+  /* Fin Header  */
+  /* Main*/
+  .titulo-dest {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2.5rem;
+    margin: 20px;
+  }
+  .cards-slider {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  .cards-slider .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .cards-slider .card .img-slider {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .cards-slider .card .img-slider img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card-body {
+    text-align: center;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  .banners {
+    display: block;
+    justify-content: center;
+  }
+  .banners .banners-pages {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    margin: 10px 0;
+    height: 100%;
+  }
+  .banners .banners-pages li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 0%;
+  }
+  .banners .banners-pages li .ban-img {
+    width: 360px;
+    height: 80%;
+  }
+  .banners .banners-pages li img {
+    width: 100px;
+    height: 100%;
+    filter: grayscale(1);
+  }
+  .banners .banners-pages li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  .banners .banners-pages li a .titulo-banner {
+    display: block;
+    position: absolute;
+    color: rgb(232, 251, 54);
+    background-color: rgba(128, 128, 128, 0.559);
+    padding: 12px 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: all 0.2s ease;
+    font-family: "Anton", sans-serif;
+    font-size: 1.5rem;
+  }
+  /*fin main*/
+  /*Aside*/
+  .newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .newsletter .img-ajax {
+    background-image: url(../img/index/ajax-news.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 315px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .newsletter .img-ajax .texto {
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: auto;
+  }
+  .newsletter .img-ajax .texto .texto h4 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+    color: white;
+  }
+  .newsletter .img-ajax .texto p {
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+  }
+  .newsletter .img-ajax .texto .text-yellow {
+    color: yellow;
+    font-size: 2.2rem;
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+  }
+  .newsletter .img-ajax .texto form {
+    font-size: 1rem;
+  }
+  .newsletter .img-ajax .texto form .form-control {
+    width: 90%;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton {
+    width: 100%;
+    gap: 40px;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton .boton {
+    display: inline-flex;
+    width: 40%;
+    height: 35px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton .btn-form:hover {
+    background: black;
+    color: yellow;
+    border-color: yellow;
+  }
+  .video {
+    display: flex;
+    justify-content: center;
+  }
+  .video iframe {
+    width: 80%;
+    margin-top: 30px;
+  }
+  .mail {
+    display: flex;
+    margin-top: 20px;
+  }
+  .descuento {
+    background-color: yellow;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .descuento .titulo-descuento {
+    font-size: 1.8rem;
+    font-family: "Anton", sans-serif;
+    color: black;
+  }
+  /*Fin aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(../img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: yellow;
+    background-size: cover;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .pie-pagina .grupo-1 .box h2 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+  }
+  /*Fin footer*/
+}
+@media (min-width: 1024px) {
+  .caja {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas: "principal principal" "contenido contenido" "aside aside" "contacto contacto";
+    justify-content: center;
+    padding: 10px;
+  }
+  /* Header */
+  .botonera ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.6rem;
+    font-weight: 200;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+  }
+  .botonera ul li a:hover {
+    color: white;
+    font-weight: 600;
+    background-size: 100% 2px;
+  }
+  .botonera img {
+    width: 350px;
+    margin: 15px;
+  }
+  .navbar-brand .logo-nav {
+    width: 50%;
+  }
+  .navbar .dropdown-menu {
+    background-color: black;
+  }
+  .navbar-nav {
+    margin-right: 20px;
+  }
+  .nav-color {
+    background-color: black;
+  }
+  .bot-color {
+    color: yellow !important;
+  }
+  .navbar-toggler-icon {
+    background-color: yellow;
+  }
+  /* Fin header  */
+  /* Menu */
+  .titulo-dest {
+    margin-top: 40px;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+  }
+  .cards-slider {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+  }
+  .cards-slider .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .cards-slider .card .img-slider {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  .cards-slider .card .img-slider img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .cards-slider .card .card-body {
+    text-align: center;
+    font-size: 18px;
+  }
+  .banners {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .banners .banners-pages {
+    height: auto;
+    width: 100%;
+  }
+  .banners .banners-pages li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 0%;
+  }
+  .banners .banners-pages li .ban-img {
+    width: 80%;
+    filter: grayscale(1);
+  }
+  .banners .banners-pages li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  .banners .banners-pages li a .titulo-banner {
+    display: block;
+    position: absolute;
+    color: rgb(232, 251, 54);
+    background-color: rgba(128, 128, 128, 0.559);
+    padding: 12px 12px;
+    font-size: 17px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: all 0.2s ease;
+    font-family: "Anton", sans-serif;
+    font-size: 1.2rem;
+  }
+  /*Aside*/
+  aside {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "news video" "cupon cupon";
+  }
+  .newsletter {
+    grid-area: news;
+  }
+  .video {
+    grid-area: video;
+  }
+  .desc-aside {
+    grid-area: cupon;
+  }
+  .newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .newsletter .img-ajax {
+    background-image: url(../img/index/ajax-news.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 315px;
+    width: 96%;
+    margin: 0 auto;
+  }
+  .newsletter .img-ajax .texto {
+    font-size: 2rem;
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: auto;
+  }
+  .newsletter .img-ajax .texto h4 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+    color: white;
+  }
+  .newsletter .img-ajax .texto .text-yellow {
+    color: yellow;
+    font-size: 2.2rem;
+  }
+  .newsletter .img-ajax .texto form {
+    font-size: 1rem;
+  }
+  .newsletter .img-ajax .texto form .form-control {
+    width: 100%;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton {
+    width: 100%;
+    gap: 40px;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton .boton {
+    display: inline-flex;
+    width: 40%;
+    height: 35px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .newsletter .img-ajax .texto form .contenedor-boton .btn-form:hover {
+    background: black;
+    color: yellow;
+    border-color: yellow;
+  }
+  .video {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .video iframe {
+    width: 96%;
+    margin: 30px;
+  }
+  .descuento {
+    background-color: yellow;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .descuento .titulo-descuento {
+    font-size: 3rem;
+    font-family: "Anton", sans-serif;
+    color: black;
+  }
+  /*Fin aside*/
+  /*Footer*/
+  footer .grupo-1 {
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    display: grid;
+  }
+  .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .img-cancha .titulo-pie {
+    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box h2 {
+    font-family: "Anton", sans-serif;
+    font-style: italic;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4rem;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    margin-right: 10px;
+  }
+}
+/* CSS Index */
+/*CSS SELECCIONES*/
+.contenedor {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "section main" "aside aside" "contacto contacto";
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+
+#filtros {
+  grid-area: section;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.pie-pagina {
+  grid-area: contacto;
+}
+
+@media (max-width: 670px) {
+  .contenedor {
+    grid-template-areas: "header" "section" "main" "aside" "contacto";
+    grid-template-columns: 100%;
+  }
+  /*Header*/
+  .botonera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .botonera .logo-nav {
+    width: 80%;
+  }
+  .botonera ul li {
+    margin-right: 16px;
+  }
+  .botonera ul li a {
+    font-size: 12px;
+  }
+  header a img {
+    display: flex;
+    width: 300px;
+  }
+  /*Fin Header*/
+  /*Filtros*/
+  section {
+    justify-content: center;
+    width: auto;
+  }
+  #filtros .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #filtros .accordion .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*Menu*/
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 10rem;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*Fin Menu*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+}
+@media (max-width: 1023px) {
+  .contenedor {
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "section section" "main main" "aside aside" "contacto contacto";
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .botonera ul li {
+    margin: 4px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .botonera ul li a {
+    font-size: 13px;
+  }
+  .navbar-brand .logo-nav {
+    width: 80%;
+  }
+  .ban-sel {
+    width: 100%;
+  }
+  /*Filtros*/
+  #filtros .accordion {
+    width: 50%;
+    margin: 30px auto;
+  }
+  #filtros .accordion .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion .bgBlack .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+    padding: 0;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*Main*/
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 12rem;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*Fin Main*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .img-cancha .grupo-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+  /*Fin Footer*/
+}
+@media (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "section main" "aside aside" "contacto contacto";
+  }
+  header a img {
+    width: 45%;
+    height: auto;
+    margin: 20px;
+  }
+  .botonera ul li {
+    margin: 10px;
+  }
+  .botonera ul li a {
+    font-size: 20px;
+  }
+  .ban-sel {
+    width: 100%;
+  }
+  /*Filtros*/
+  #filtros .accordion {
+    width: 95%;
+    margin: 40px;
+  }
+  #filtros .accordion .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion .bgBlack .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*  Main  */
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    width: 25%;
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*  Fin Main */
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*  Footer */
+  footer {
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    display: grid;
+  }
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4rem;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    margin-right: 10px;
+  }
+  /* Fin Footer */
+}
+/*CSS EQUIPOS*/
+.contenedor {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "section main" "aside aside" "footer footer";
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+
+#filtros {
+  grid-area: section;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.pie-pagina {
+  grid-area: contacto;
+}
+
+@media (max-width: 670px) {
+  .contenedor {
+    grid-template-areas: "header" "section" "main" "aside" "contacto";
+    grid-template-columns: 100%;
+  }
+  /*Header*/
+  .botonera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .botonera .logo-nav {
+    width: 80%;
+  }
+  .botonera ul li {
+    margin-right: 16px;
+  }
+  .botonera ul li a {
+    font-size: 12px;
+  }
+  header a img {
+    display: flex;
+    width: 300px;
+  }
+  .ban-equipos {
+    width: 100%;
+  }
+  /*Fin Header*/
+  /*Filtros*/
+  section {
+    justify-content: center;
+    width: auto;
+  }
+  #filtros .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #filtros .accordion .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*Menu*/
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 10rem;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*Fin Menu*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+}
+@media (max-width: 1023px) {
+  .contenedor {
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "section section" "main main" "aside aside" "contacto contacto";
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .botonera ul li {
+    margin: 4px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .botonera ul li a {
+    font-size: 13px;
+  }
+  .navbar-brand .logo-nav {
+    width: 80%;
+  }
+  .ban-equipos {
+    width: 100%;
+  }
+  /*Filtros*/
+  #filtros .accordion {
+    width: 100%;
+    margin: 60px 30px;
+  }
+  #filtros .accordion .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion .bgBlack .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+    padding: 0;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*Main*/
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 12rem;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*Fin Main*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .img-cancha .grupo-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+  /*Fin Footer*/
+}
+@media (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "section main" "aside aside" "contacto contacto";
+  }
+  header a img {
+    width: 45%;
+    height: auto;
+    margin: 20px;
+  }
+  .botonera ul li {
+    margin: 10px;
+  }
+  .botonera ul li a {
+    font-size: 20px;
+  }
+  .ban-sel {
+    width: 100%;
+  }
+  .ban-equipos {
+    width: 100%;
+  }
+  /*Filtros*/
+  #filtros .accordion {
+    width: 95%;
+    margin: 40px;
+  }
+  #filtros .accordion .bgBlack {
+    background-color: black;
+  }
+  #filtros .accordion .bgBlack .cat-acordion {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  #filtros .accordion .form-check {
+    margin-left: 20px;
+  }
+  #filtros .accordion .form-check .tex-cat {
+    color: white;
+    font-size: 16px;
+  }
+  /*Fin Filtros*/
+  /*  Main  */
+  .galeria {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .galeria figure {
+    width: 25%;
+    margin: 20px;
+    padding: 10px;
+  }
+  .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  .galeria figure .card img {
+    width: 80%;
+    height: auto;
+    margin: 10px;
+  }
+  .galeria figure .card .card-body {
+    text-align: center;
+  }
+  .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*  Fin Main */
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*  Footer */
+  footer {
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    display: grid;
+  }
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4rem;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    margin-right: 10px;
+  }
+  /* Fin Footer */
+}
+/*CSS CARRITO*/
+@media (max-width: 670px) {
+  /*Header*/
+  .botonera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .botonera .logo-nav {
+    width: 80%;
+  }
+  .botonera ul li {
+    margin-right: 16px;
+  }
+  .botonera ul li a {
+    font-size: 12px;
+  }
+  .botonera ul li a img {
+    display: flex;
+    width: 300px;
+  }
+  /*Fin Header*/
+  /*Main*/
+  .fondo-img {
+    background-image: url(../img/pag-retros/fondo-compra2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .fondo-img .contenedor-compra {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "formCompra" "infoCompra";
+  }
+  .fondo-img .contenedor-compra .formCompra {
+    grid-area: formCompra;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 24px;
+  }
+  .fondo-img .contenedor-compra .text-white {
+    color: white;
+  }
+  .fondo-img .contenedor-compra .infoCompra {
+    grid-area: infoCompra;
+    margin: 20px;
+    margin-left: 10px;
+  }
+  .fondo-img .contenedor-compra .infoCompra .titulo-codigo {
+    color: yellow;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 50%;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure .card img {
+    width: 80%;
+    height: 40%;
+    margin: 10px;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure .card .text-black {
+    color: black;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure .card .card-body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .fondo-img .contenedor-compra .infoCompra .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  /*Fin Main*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+  /*Fin Footer*/
+}
+@media (max-width: 1023px) {
+  .contenedor-compra {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "formCompra" "infoCompra";
+  }
+  /*Header*/
+  .botonera ul li {
+    margin: 4px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .botonera ul li a {
+    font-size: 13px;
+  }
+  .navbar-brand .logo-nav {
+    width: 80%;
+  }
+  /*Fin Header*/
+  /*Main*/
+  .fondo-img {
+    background-image: url(../img/pag-retros/fondo-compra2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .formCompra {
+    grid-area: formCompra;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 24px;
+  }
+  .infoCompra {
+    grid-area: infoCompra;
+    margin: 20px;
+  }
+  .infoCompra .galeria figure {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .infoCompra .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 50%;
+  }
+  .infoCompra .galeria figure .card img {
+    width: 80%;
+    height: 40%;
+    margin: 10px;
+  }
+  .infoCompra .galeria figure .card .card-body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .infoCompra .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .infoCompra .titulo-codigo {
+    color: yellow;
+  }
+  .text-white {
+    color: white;
+  }
+  .text-yellow {
+    color: yellow;
+    margin-top: 40px;
+  }
+  .text-black {
+    color: black;
+  }
+  /*Fin Main*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .img-cancha .grupo-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+  /*Fin Footer*/
+}
+@media (min-width: 1024px) {
+  /*Header*/
+  header a img {
+    width: 45%;
+    height: auto;
+    margin: 20px;
+  }
+  .botonera ul li {
+    margin: 10px;
+  }
+  .botonera ul li a {
+    font-size: 20px;
+  }
+  /*Fin Header*/
+  /*Main*/
+  .contenedor-compra {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "formCompra infoCompra";
+    display: flex;
+    padding: 10px;
+  }
+  .fondo-img {
+    background-image: url(../img/pag-retros/fondo-compra2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 76vh;
+  }
+  .formCompra {
+    grid-area: formCompra;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+  .infoCompra {
+    grid-area: infoCompra;
+  }
+  .infoCompra .galeria figure {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .infoCompra .galeria figure .card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 50%;
+  }
+  .infoCompra .galeria figure .card .text-black {
+    color: black;
+  }
+  .infoCompra .galeria figure .card img {
+    width: 80%;
+    height: 40%;
+    margin: 10px;
+  }
+  .infoCompra .galeria figure .card .card-body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .infoCompra .galeria figure .card .card-body p {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .infoCompra .titulo-codigo {
+    color: yellow;
+  }
+  .text-white {
+    color: white;
+  }
+  .text-yellow {
+    color: yellow;
+    margin-top: 40px;
+  }
+  .main-compra .form1 {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 50%;
+  }
+  .main-compra .form2 {
+    margin-top: 30px;
+    width: 50%;
+  }
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*  Footer */
+  footer {
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    display: grid;
+  }
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4rem;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    margin-right: 10px;
+  }
+  /* Fin Footer */
+}
+/*CSS NOSOTROS*/
+@media (max-width: 670px) {
+  /*Header*/
+  .botonera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .botonera ul li {
+    margin-right: 16px;
+  }
+  .navbar-brand .logo-nav {
+    width: 50%;
+  }
+  .botonera ul li a {
+    font-size: 12px;
+  }
+  .ban-mar {
+    width: 100%;
+  }
+  .ban-log-mar {
+    width: 100%;
+  }
+  /*Menu*/
+  .nosotros {
+    margin: 30px;
+    padding: 10px;
+  }
+  .box-contacto-uno {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box-contacto-dos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconos-contacto {
+    text-align: center;
+  }
+  .iconos-contacto p {
+    font-size: 1.5rem;
+  }
+  .iconos-contacto .iconos {
+    width: 10%;
+  }
+  .mapa {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+  }
+  .formMsj {
+    width: 35%;
+    padding: 5px;
+  }
+  .formMsj .formContent {
+    margin: 10px;
+  }
+  .cuidadosProducto {
+    margin: 30px 0;
+  }
+  /*Fin Menu*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    width: 100%;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px !important;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .grupo-1 .box h3 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .botonera ul li {
+    margin: 4px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .botonera ul li a {
+    font-size: 13px;
+  }
+  .navbar-brand .logo-nav {
+    width: 80%;
+  }
+  .ban-mar {
+    width: 100%;
+  }
+  /*Menu*/
+  .nosotros {
+    margin: 30px;
+    padding: 10px;
+  }
+  .box-contacto-uno {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box-contacto-dos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconos-contacto {
+    text-align: center;
+  }
+  .iconos-contacto p {
+    font-size: 1.5rem;
+  }
+  .iconos-contacto .iconos {
+    width: 10%;
+  }
+  .mapa {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+  }
+  .formMsj {
+    width: 35%;
+    padding: 5px;
+  }
+  .formMsj .formContent {
+    margin: 10px;
+  }
+  .cuidadosProducto {
+    margin: 30px 0;
+  }
+  /*Fin Menu*/
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*Fin Aside*/
+  /*Footer*/
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .img-cancha .grupo-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 10px;
+  }
+  .pie-pagina .img-cancha .grupo-1 .box h3 {
+    font-family: "Anton", sans-serif;
+    color: black;
+    font-style: italic;
+  }
+  /*Fin Footer*/
+}
+@media (min-width: 1024px) {
+  header a img {
+    width: 45%;
+    height: auto;
+    margin: 20px;
+  }
+  .botonera ul li {
+    margin: 10px;
+  }
+  .botonera ul li a {
+    font-size: 20px;
+  }
+  /*  MAIN  */
+  .nosotros {
+    margin: 30px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+  }
+  .nosotros h2 {
+    color: yellow;
+  }
+  .box-contacto-uno {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px auto;
+  }
+  .box-contacto-dos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .iconos-contacto {
+    text-align: center;
+  }
+  .iconos-contacto p {
+    font-size: 1.5rem;
+  }
+  .iconos-contacto .iconos {
+    width: 10%;
+    color: yellow;
+  }
+  .mapa {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+  }
+  .formMsj {
+    width: 35%;
+    padding: 5px;
+  }
+  .formMsj .formContent {
+    margin: 10px;
+  }
+  /* Boton */
+  .botonMsj {
+    font-family: inherit;
+    font-size: 20px;
+    background: yellow;
+    color: black;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  button:hover .svg-flecha {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  button:hover span {
+    transform: translateX(5em);
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  /* Boton */
+  .cuidadosProducto {
+    margin: 30px 0;
+  }
+  /* Fin MAIN  */
+  /*Aside*/
+  .descuento {
+    width: auto;
+  }
+  /*  Footer */
+  footer {
+    width: 100%;
+    height: 150px;
+    background-color: yellow;
+    display: grid;
+  }
+  .pie-pagina {
+    display: block;
+  }
+  .pie-pagina .img-cancha {
+    background-image: url(..//img/index/estadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .pie-pagina .img-cancha .titulo-pie {
+    color: white;
+    font-size: 4rem;
+    margin: 30px;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+  }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pie-pagina .grupo-1 .box {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.4rem;
+  }
+  .pie-pagina .grupo-1 .box .red-social a {
+    display: inline;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
